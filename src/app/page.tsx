@@ -1,10 +1,12 @@
 import styles from "./styles/page.module.css";
 import { ProductsList } from "./components/productsList";
+import { getProducts } from "./api/getProducts";
 
-export default function Home() {
+export default async function Home() {
+  const products = await getProducts();
   return (
     <main className={styles.main}>
-      <ProductsList />
+      <ProductsList products={products} />
     </main>
   );
 }

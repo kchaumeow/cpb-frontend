@@ -10,7 +10,7 @@ export const ProductCard = ({ productRecord }: ProductCardProps) => {
   const urlId = encodeURIComponent(productRecord.product.id);
   return (
     <Link href={`/product/${urlId}`}>
-      <div className={styles.productCard} key={productRecord.product.id}>
+      <div className={styles.productCard} role="gridcell">
         <ProductImage
           src={productRecord.images[0].src}
           width={200}

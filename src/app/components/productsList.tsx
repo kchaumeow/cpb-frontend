@@ -1,13 +1,12 @@
-import { getProducts } from "../api/getProducts";
 import { ProductCard } from "./productCard";
 import styles from "../styles/productList.module.css";
+import { ProductDTO } from "../../../types";
 
-export const ProductsList = async () => {
-  const products = await getProducts();
+export const ProductsList = ({ products }: { products: ProductDTO[] }) => {
   return (
     <div className={styles.productList}>
       {products.map((product) => (
-        <ProductCard productRecord={product} />
+        <ProductCard productRecord={product} key={product.product.id} />
       ))}
     </div>
   );

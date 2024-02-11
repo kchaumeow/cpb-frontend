@@ -21,7 +21,7 @@ pnpm dev
 bun dev
 ```
 
-Откройте [http://localhost:3000](http://localhost:3000) в своём браузере для просмотра.
+Откройте [http://localhost:3000](http://localhost:5000) в своём браузере для просмотра.
 
 ## Тесты
 
